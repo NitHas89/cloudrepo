@@ -3,6 +3,8 @@ on: workflow_dispatch
 jobs: 
   one:
     runs-on: ubuntu-latest
+    env:
+      MY_ENV: Test
     steps:
     - name: run hello world
       run: echo hello world
@@ -11,6 +13,6 @@ jobs:
         python-version: '3.10' 
     - uses: actions/checkout@v3
     - run: python3 test.py
-      
+    
   
   
